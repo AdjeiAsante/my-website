@@ -1,32 +1,125 @@
-body {
-  font-family: system-ui, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+CSS
+* {
+  box-sizing: border-box;
   margin: 0;
-  background-color: #f4f4f9;
-  color: #333;
+  padding: 0;
 }
 
-.card {
-  background: white;
-  padding: 2rem 3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
   text-align: center;
 }
 
-button {
-  background-color: #0066ff;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
+/* Top Banner */
+.hero-banner {
+  position: relative;
+  background: linear-gradient(120deg, #38bdf8, #3b82f6, #6366f1);
+  color: #ffffff;
+  padding: 55px 20px 80px;
+  overflow: hidden;
 }
 
-button:hover {
-  background-color: #0052cc;
+.hero-banner h1 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
+/* Subtle curved bottom wave */
+.banner-wave {
+  position: absolute;
+  bottom: -25px;
+  left: -5%;
+  width: 110%;
+  height: 55px;
+  background: #ffffff;
+  border-radius: 50% 50% 0 0;
+}
+
+/* Profile Header Section */
+.profile-header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 10px 20px 40px;
+}
+
+.brand-badge {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #eff6ff;
+  border: 3px solid #2563eb;
+  color: #1d4ed8;
+  font-weight: 800;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-text {
+  font-size: 1.4rem;
+  color: #0ea5e9;
+  min-height: 2rem;
+  margin-bottom: 8px;
+}
+
+.cursor {
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+/* Two-Tone Pill Buttons */
+.badge-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pill-btn {
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease;
+}
+
+.pill-btn:hover {
+  transform: translateY(-2px);
+}
+
+.pill-left {
+  background-color: #4b5563;
+  color: #ffffff;
+  padding: 7px 11px;
+}
+
+.pill-right {
+  color: #ffffff;
+  padding: 7px 12px;
+}
+
+.pill-right.blue { background-color: #0ea5e9; }
+.pill-right.red { background-color: #ef4444; }
+.pill-right.green { background-color: #22c55e; }
